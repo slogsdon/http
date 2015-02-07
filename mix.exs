@@ -9,11 +9,11 @@ defmodule Http.Mixfile do
   end
 
   def application do
-    [applications: [:logger, :ranch],
+    [applications: [:logger, :pool, :crypto, :public_key, :ssl],
      mod: {Http, []}]
   end
 
   defp deps do
-    [{:ranch, "~> 1.0.0"}]
+    [{:pool, "~> 0.0.2"}]
   end
 end

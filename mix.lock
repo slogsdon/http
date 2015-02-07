@@ -1,1 +1,2 @@
-%{"ranch": {:hex, :ranch, "1.0.0"}}
+%{"pool": {:hex, :pool, "0.0.2"},
+  "ranch": {:hex, :ranch, "1.0.0"}}
