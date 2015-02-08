@@ -31,6 +31,8 @@ defmodule Http.Mixfile do
   defp description do
     """
     HTTP server for Elixir
+
+    Not currently working, but close :)
     """
   end
 
