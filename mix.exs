@@ -3,7 +3,7 @@ defmodule Http.Mixfile do
 
   def project do
     [ app: :http,
-      version: "0.0.1",
+      version: "0.0.2-dev",
       elixir: "~> 1.0",
       name: "Http",
       source_url: "https://github.com/slogsdon/http",
