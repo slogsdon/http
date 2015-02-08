@@ -1,1 +1,1 @@
-# Http
+# Http[![Build Status](https://img.shields.io/travis/slogsdon/http.svg?style=flat)](https://travis-ci.org/slogsdon/http)[![Coverage Status](https://img.shields.io/coveralls/slogsdon/http.svg?style=flat)](https://coveralls.io/r/slogsdon/http)[![Hex.pm Version](http://img.shields.io/hexpm/v/http.svg?style=flat)](https://hex.pm/packages/http)
