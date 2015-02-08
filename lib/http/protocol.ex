@@ -14,7 +14,7 @@ defmodule Http.Protocol do
     receive_timeout = opts[:receive_timeout] || 5_000
     case transport.receive(socket, 0, receive_timeout) do
       {:ok, data} ->
-        IO.inspect data
+        Http.Lib.Request.parse data
         loop(socket, transport)
       _ ->
         :ok = transport.close(socket)
