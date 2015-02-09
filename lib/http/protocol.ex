@@ -10,12 +10,13 @@ defmodule Http.Protocol do
     loop(socket, transport, opts)
   end
 
-  defp loop(socket, transport, opts \\ []) do
+  defp loop(socket, transport, opts) do
     receive_timeout = opts[:receive_timeout] || 5_000
     case transport.receive(socket, 0, receive_timeout) do
       {:ok, data} ->
         Http.Lib.Request.parse data
-        loop(socket, transport)
+        transport.send(socket, "HTTP/1.1 200 OK\r\n\r\n" <> data)
+        :ok = transport.close(socket)
       _ ->
         :ok = transport.close(socket)
     end

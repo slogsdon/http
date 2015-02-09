@@ -22,10 +22,10 @@ defmodule Http.Mixfile do
 
   defp deps do
     [ { :pool, "~> 0.0.2" },
-      { :earmark, "~> 0.1.12" },
-      { :ex_doc, "~> 0.6.2" },
-      { :excoveralls, "~> 0.3" },
-      { :dialyze, "~> 0.1.3" } ]
+      { :earmark, "~> 0.1.12", only: :docs },
+      { :ex_doc, "~> 0.6.2", only: :docs },
+      { :excoveralls, "~> 0.3", only: :test },
+      { :dialyze, "~> 0.1.3", only: :test } ]
   end
 
   defp description do
